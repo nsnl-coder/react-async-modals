@@ -21,13 +21,13 @@ export default function TestModal(props: TestModalProps): React.JSX.Element {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center">
-      <div className="bg-white w-96 p-4">
+      <BackDrop />
+      <div className="bg-white w-96 p-4 z-10">
         {text}
         <button onClick={handleButtonClick}>Open modal</button>
         <button onClick={handleCloseModal} className="px-4 py-2 bg-green-600">
           Close Modal
         </button>
-        <BackDrop />
       </div>
     </div>
   );
